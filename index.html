@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body onload="checkInput()">
     <div class="header">
       <h1>Mit navn er Kasper Westeraa</h1>
     </div>
@@ -14,66 +15,26 @@
     <div class="form">
       <form action="/action_page.php">
         <label class="name" for="fname">Fornavn</label>
-        <input type="text" id="fname" name="firstname" placeholder="Dit fornavn.." />
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Dit fornavn.."
+          oninput="checkInput()"
+        />
 
         <label class="name" for="lname">Efternavn</label>
-        <input type="text" id="lname" name="lastname" placeholder="Dit efternavn.." />
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Dit efternavn.."
+          oninput="checkInput()"
+        />
 
-        <input type="submit" value="Submit" />
+        <input type="submit" id="button" value="Submit" />
       </form>
     </div>
   </body>
-
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .header {
-      padding: 60px;
-      text-align: center;
-      background: #099c7e;
-      color: white;
-      font-size: 30px;
-      border-radius: 12px;
-    }
-
-    input[type="text"] {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    input[type="submit"] {
-      width: 100%;
-      background-color: #099c7e;
-      font-size: 20px;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .name {
-      font-size: 20px;
-      letter-spacing: 0.8px;
-    }
-
-    input::placeholder {
-      font: 17px/3 sans-serif;
-      letter-spacing: 1px;
-    }
-
-    .form {
-      border-radius: 12px;
-      background-color: #f2f2f2;
-      padding: 20px;
-    }
-  </style>
+  <script src="main.js"></script>
 </html>
